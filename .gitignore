@@ -1,8 +1,23 @@
-
-
 # Secrets
 backend/.env
 backend/firebase/service_account.json
 *.keystore
 *.jks
 frontend/android/key.properties
+
+# Flutter build artifacts — regenerated on every build, should never be committed
+frontend/build/
+frontend/.dart_tool/
+frontend/.flutter-plugins
+frontend/.flutter-plugins-dependencies
+frontend/android/.gradle/
+frontend/android/.kotlin/
+frontend/ios/Pods/
+
+# Python
+backend/__pycache__/
+**/__pycache__/
+backend/db.sqlite3
+backend/staticfiles/
+backend/venv/
+backend/.venv/
