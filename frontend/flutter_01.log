@@ -1,0 +1,67 @@
+Flutter crash report.
+Please report a bug at https://github.com/flutter/flutter/issues.
+
+## command
+
+flutter run -d chrome --web-port 8080
+
+## exception
+
+SocketException: SocketException: Error event raised in event handler : error condition has been reset, port = 0
+
+```
+#0      _NativeSocket.multiplex (dart:io-patch/socket_patch.dart:1735:30)
+#1      _RawReceivePort._handleMessage (dart:isolate-patch/isolate_patch.dart:192:12)
+```
+
+## flutter doctor
+
+```
+[✓] Flutter (Channel stable, 3.44.8, on Fedora Linux 44 (Workstation Edition)
+    7.0.12-201.fc44.x86_64, locale en_US.UTF-8) [137ms]
+    • Flutter version 3.44.8 on channel stable at /home/prakash/Downloads/flutter
+    • Upstream repository https://github.com/flutter/flutter.git
+    • Framework revision 058e0af2c2 (2 weeks ago), 2026-07-23 10:56:21 -0700
+    • Engine revision 0cd610717b
+    • Dart version 3.12.2
+    • DevTools version 2.57.0
+    • Feature flags: enable-web, enable-linux-desktop, enable-macos-desktop, enable-windows-desktop,
+      enable-android, enable-ios, cli-animations, enable-native-assets,
+      enable-swift-package-manager, omit-legacy-version-file, enable-lldb-debugging,
+      enable-uiscene-migration
+
+[✓] Android toolchain - develop for Android devices (Android SDK version 36.0.0) [3.0s]
+    • Android SDK at /home/prakash/android-sdk
+    • Emulator version unknown
+    • Platform android-36, build-tools 36.0.0
+    • Java binary at: /usr/bin/java
+      This JDK was found in the system PATH.
+      To manually set the JDK path, use: `flutter config --jdk-dir="path/to/jdk"`.
+    • Java version OpenJDK Runtime Environment (Red_Hat-25.0.4.0.7-2) (build 25.0.4+7)
+    • All Android licenses accepted.
+
+[✓] Chrome - develop for the web [75ms]
+    • Chrome at google-chrome
+
+[✗] Linux toolchain - develop for Linux desktop [335ms]
+    ✗ clang++ is required for Linux development.
+      It is likely available from your distribution (e.g.: apt install clang), or can be downloaded
+      from https://releases.llvm.org/
+    • cmake version 4.3.0
+    • ninja version 1.13.2
+    • pkg-config version 2.5.1
+    ✗ GTK 3.0 development libraries are required for Linux development.
+      They are likely available from your distribution (e.g.: apt install libgtk-3-dev)
+    ! Unable to access driver information using 'eglinfo'.
+      It is likely available from your distribution (e.g.: apt install mesa-utils)
+
+[✓] Connected device (2 available) [208ms]
+    • Linux (desktop) • linux  • linux-x64      • Fedora Linux 44 (Workstation Edition)
+      7.0.12-201.fc44.x86_64
+    • Chrome (web)    • chrome • web-javascript • Google Chrome 149.0.7827.155
+
+[✓] Network resources [978ms]
+    • All expected network resources are available.
+
+! Doctor found issues in 1 category.
+```

@@ -1,0 +1,4 @@
+storePassword=your-keystore-password
+keyPassword=your-key-password
+keyAlias=safeher
+storeFile=/absolute/path/to/safeher-release-key.jks
