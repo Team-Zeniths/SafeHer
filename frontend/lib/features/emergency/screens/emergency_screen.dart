@@ -401,7 +401,7 @@ class _Hotline {
 /// on "Call" in the dialer to actually place the call — this app never
 /// dials silently on its own.
 Future<void> _launchPhone(BuildContext context, String phone) async {
-  final uri = Uri(scheme: 'tel', path: phone);
+  final uri = Uri(scheme: 'tel', path: phone.replaceAll(RegExp(r'[\s\-()]'), ''));
   final ok = await launchUrl(uri);
   if (!ok && context.mounted) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -416,7 +416,7 @@ Future<void> _launchPhone(BuildContext context, String phone) async {
 Future<void> _launchSms(BuildContext context, String phone) async {
   final uri = Uri(
     scheme: 'sms',
-    path: phone,
+    path: phone.replaceAll(RegExp(r'[\s\-()]'), ''),
     queryParameters: {'body': "I need help. Can you call me? — sent via SafeHer"},
   );
   final ok = await launchUrl(uri);

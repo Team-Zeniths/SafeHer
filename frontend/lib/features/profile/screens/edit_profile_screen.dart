@@ -133,7 +133,7 @@ class _EditProfileScreenState extends State<EditProfileScreen> {
                 const SizedBox(height: AppSizes.md),
                 CustomTextField(
                   label: 'Phone Number',
-                  hint: '+91 XXXXX XXXXX',
+                  hint: '98765 43210',
                   controller: _phoneCtrl,
                   keyboardType: TextInputType.phone,
                   prefixIcon: Icons.phone_outlined,

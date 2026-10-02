@@ -123,7 +123,7 @@ class _RegisterScreenState extends State<RegisterScreen> {
                     const SizedBox(height: AppSizes.md),
                     CustomTextField(
                       label: 'Phone number',
-                      hint: '+91 98765 43210',
+                      hint: '98765 43210',
                       controller: _phoneController,
                       keyboardType: TextInputType.phone,
                       prefixIcon: Icons.phone_outlined,
